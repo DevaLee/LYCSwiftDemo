@@ -97,7 +97,7 @@ extension HYContentView : UICollectionViewDataSource {
         let childVc = childVcs[indexPath.item]
         childVc.view.frame = cell.contentView.bounds
         cell.contentView.addSubview(childVc.view)
-        cell.backgroundColor = UIColor.randomColor()
+   
         
         return cell
     }

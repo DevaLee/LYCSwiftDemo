@@ -81,7 +81,7 @@ extension LYCAnchorViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let collectionViewCell = collectionView .dequeueReusableCell(withReuseIdentifier: kAnchorCellId, for: indexPath) as! LYCAnchorCollectionViewCell
-        collectionViewCell.backgroundColor = UIColor.randomColor()
+      
         collectionViewCell.anchorModel = mainVM.anchors[indexPath.item]
         // 上拉刷新
         if indexPath.item == mainVM.anchors.count - 1 {

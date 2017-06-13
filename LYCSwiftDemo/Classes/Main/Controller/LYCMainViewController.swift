@@ -14,7 +14,7 @@ class LYCMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.randomColor()
+
         setupUI()
     }
     
@@ -66,6 +66,7 @@ extension LYCMainViewController{
         let titleStyle = HYTitleStyle.init()
         titleStyle.isScrollEnable = true
         titleStyle.isShowBottomLine = true
+        titleStyle.normalColor = UIColor(r: 255, g: 255, b: 255)
         let pageViewFrame = CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight)
         // 将 子控制器 加到 父控制器中 ，将子控制器的view 作为父控制器中 cell的子view
         let pageView = HYPageView.init(frame: pageViewFrame, titles: titles, style: titleStyle, childVcs: childVCs, parentVc: self)

@@ -11,6 +11,7 @@ import UIKit
 class LYCGifModel : LYCBaseModel{
     
     var gUrl : String = ""
+    var img : String = ""
     var subject : String = ""
     var coin : Int = 0
     var oCoin : Int = 0

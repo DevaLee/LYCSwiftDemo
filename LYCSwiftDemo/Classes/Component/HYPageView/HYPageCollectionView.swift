@@ -64,7 +64,7 @@ extension HYPageCollectionView {
         let titleViewY = self.isTitleInTop ? 0 : bounds.height - style.titleHeight
         let titleViewFrame = CGRect(x: 0, y: titleViewY, width: bounds.width, height: style.titleHeight)
         titleView = HYTitleView(frame: titleViewFrame, titles: titles, style: style)
-        titleView.backgroundColor = UIColor.randomColor()
+        titleView.backgroundColor = style.titleBackgroundColor
         titleView.delegate = self
         addSubview(titleView)
         

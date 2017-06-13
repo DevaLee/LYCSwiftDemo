@@ -23,13 +23,14 @@ class LYCGifViewCell: UICollectionViewCell {
         didSet {
             gifNameLabel.text = gifModel?.subject
             gifCostLabel.text = "\(String(describing: gifModel?.coin))"
-            let urlString = URL(string: gifModel!.gUrl)
+            let urlString = URL(string: gifModel!.img)
             gifImageView.kf.setImage(with: urlString)
-            gifImageView.contentMode = .center
+            gifImageView.contentMode = .scaleAspectFit
             
             imageContentView.backgroundColor = UIColor.clear
             
             gifCostLabel.text = "\(gifModel!.coin)"
+            gifCostLabel.font = UIFont.systemFont(ofSize: 14)
           
             
         }

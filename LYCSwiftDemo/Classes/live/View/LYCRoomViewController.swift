@@ -138,6 +138,13 @@ extension LYCRoomViewController {
             self.chatToolsView.frame.origin.y = chatToolY
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.chatToolsView.chatTextFiled.resignFirstResponder()
+        UIView.animate(withDuration: 0.5) { 
+            self.giftView.frame.origin.y = kScreenHeight
+        }
+    }
 }
 
 extension LYCRoomViewController : LYCChatToolViewDelegate{

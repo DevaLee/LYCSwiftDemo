@@ -12,7 +12,7 @@ class HYTitleStyle {
     /// 是否是滚动的Title
     var isScrollEnable : Bool = false
     /// 普通Title颜色
-    var normalColor : UIColor = UIColor(r: 0, g: 0, b: 0)
+    var normalColor : UIColor = UIColor(r: 255, g: 255, b:255)
     /// 选中Title颜色
     var selectedColor : UIColor = UIColor(r: 255, g: 127, b: 0)
     /// Title字体大小
@@ -21,6 +21,7 @@ class HYTitleStyle {
     var titleMargin : CGFloat = 20
     
     var titleHeight : CGFloat = 44
+    var titleBackgroundColor  : UIColor = UIColor.black
     /// 是否显示底部滚动条
     var isShowBottomLine : Bool = false
     /// 底部滚动条的颜色

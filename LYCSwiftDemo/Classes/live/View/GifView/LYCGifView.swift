@@ -17,6 +17,7 @@ class LYCGifView: UIView {
         let titles = ["礼物"]
         let style = HYTitleStyle()
         style.isShowBottomLine = false
+        style.titleBackgroundColor = UIColor.black
         let layout = HYPageCollectionFlowLayout()
         layout.cols = 4
         layout.rows = 2
