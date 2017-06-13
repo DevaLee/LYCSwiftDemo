@@ -12,5 +12,8 @@ import UIKit
 let kScreenWidth  = UIScreen.main.bounds.size.width
 let kScreenHeight = UIScreen.main.bounds.size.height
 
+let brownColor  = UIColor(r: 216, g: 164, b: 78)
+
+
 
 		

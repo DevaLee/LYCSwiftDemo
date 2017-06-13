@@ -12,6 +12,7 @@ class LYCGifViewCell: UICollectionViewCell {
 
     @IBOutlet weak var gifNameLabel: UILabel!
     
+    @IBOutlet weak var imageContentView: UIView!
     @IBOutlet weak var gifCostLabel: UILabel!
     @IBOutlet weak var gifImageView: UIImageView!
     override func awakeFromNib() {
@@ -22,9 +23,15 @@ class LYCGifViewCell: UICollectionViewCell {
         didSet {
             gifNameLabel.text = gifModel?.subject
             gifCostLabel.text = "\(String(describing: gifModel?.coin))"
+            let urlString = URL(string: gifModel!.gUrl)
+            gifImageView.kf.setImage(with: urlString)
+            gifImageView.contentMode = .center
             
-//            let resource = Resource(
-//            gifImageView.kf_setImage(with: <#T##Resource?#>, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+            imageContentView.backgroundColor = UIColor.clear
+            
+            gifCostLabel.text = "\(gifModel!.coin)"
+          
+            
         }
     
     }
