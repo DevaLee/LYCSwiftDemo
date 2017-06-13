@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A2F856AD02666B4FA6A5BB2 /* Pods_LYCSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */; };
+		89CAE8BE1EECF1F100CE8BBD /* LYCRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */; };
+		89CAE8BF1EECF1F100CE8BBD /* LYCRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */; };
+		89CAE8C21EED08B000CE8BBD /* LYCEmitterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */; };
+		89DC69AF1EED332300B4BB19 /* LYCNibAbleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC69AE1EED332300B4BB19 /* LYCNibAbleProtocol.swift */; };
+		89FB2C981EEBB8A100CCE581 /* LYCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2C971EEBB8A100CCE581 /* LYCMainViewController.swift */; };
+		89FB2CA81EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CA71EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift */; };
+		89FB2CB01EEBBCA600CCE581 /* LYCMainTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CAF1EEBBCA600CCE581 /* LYCMainTypeModel.swift */; };
+		89FB2CB21EEBBCC700CCE581 /* LYCAnchorTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CB11EEBBCC700CCE581 /* LYCAnchorTypeModel.swift */; };
+		89FB2CB41EEBBCE400CCE581 /* LYCMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CB31EEBBCE400CCE581 /* LYCMainViewModel.swift */; };
+		89FB2CB61EEBBD6500CCE581 /* LYCAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CB51EEBBD6500CCE581 /* LYCAnchorViewController.swift */; };
+		89FB2CB91EEBBDB100CCE581 /* LYCUIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CB81EEBBDB100CCE581 /* LYCUIColor-Extension.swift */; };
+		89FB2CBC1EEBBDF800CCE581 /* LYCConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CBB1EEBBDF800CCE581 /* LYCConst.swift */; };
+		89FB2CC21EEBBE2400CCE581 /* HYContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CBE1EEBBE2400CCE581 /* HYContentView.swift */; };
+		89FB2CC31EEBBE2400CCE581 /* HYPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CBF1EEBBE2400CCE581 /* HYPageView.swift */; };
+		89FB2CC41EEBBE2400CCE581 /* HYTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CC01EEBBE2400CCE581 /* HYTitleStyle.swift */; };
+		89FB2CC51EEBBE2400CCE581 /* HYTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CC11EEBBE2400CCE581 /* HYTitleView.swift */; };
+		89FB2CC71EEBBE8100CCE581 /* LYCNSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CC61EEBBE8100CCE581 /* LYCNSDate-Extension.swift */; };
+		89FB2CCA1EEBC0E000CCE581 /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89FB2CC91EEBC0E000CCE581 /* types.plist */; };
+		89FB2CCC1EEBC2C600CCE581 /* LYCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CCB1EEBC2C600CCE581 /* LYCBaseModel.swift */; };
+		89FB2CCF1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CCD1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift */; };
+		89FB2CD01EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FB2CCE1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib */; };
+		89FB2CD31EEBE97000CCE581 /* LYCNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB2CD21EEBE97000CCE581 /* LYCNetworkTool.swift */; };
+		AA0C4E001EE94CE50032E05A /* LYCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0C4DFF1EE94CE50032E05A /* LYCNavigationViewController.swift */; };
+		AA10AA011EE8136F00F6BEC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA001EE8136F00F6BEC5 /* AppDelegate.swift */; };
+		AA10AA031EE8136F00F6BEC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA021EE8136F00F6BEC5 /* ViewController.swift */; };
+		AA10AA061EE8136F00F6BEC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10AA041EE8136F00F6BEC5 /* Main.storyboard */; };
+		AA10AA081EE8136F00F6BEC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA10AA071EE8136F00F6BEC5 /* Assets.xcassets */; };
+		AA10AA0B1EE8136F00F6BEC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA10AA091EE8136F00F6BEC5 /* LaunchScreen.storyboard */; };
+		AA10AA1A1EE8147700F6BEC5 /* LYCDiscorverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA191EE8147700F6BEC5 /* LYCDiscorverViewController.swift */; };
+		AA10AA1E1EE8149700F6BEC5 /* LYCMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA1D1EE8149700F6BEC5 /* LYCMeViewController.swift */; };
+		AA10AA201EE814A200F6BEC5 /* LYCRankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA1F1EE814A200F6BEC5 /* LYCRankViewController.swift */; };
+		AA10AA221EE8165500F6BEC5 /* LYCTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA211EE8165500F6BEC5 /* LYCTabbarViewController.swift */; };
+		AA10AA241EE817BE00F6BEC5 /* LYCSharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA10AA231EE817BE00F6BEC5 /* LYCSharedViewController.swift */; };
+		AA4B36F71EEF95C1007AE5AC /* LYCGifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B36F61EEF95C1007AE5AC /* LYCGifModel.swift */; };
+		AA4B36F91EEF95F7007AE5AC /* LYCGifViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B36F81EEF95F7007AE5AC /* LYCGifViewModel.swift */; };
+		AA4B37011EEFCD9E007AE5AC /* LYCGifViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4B36FF1EEFCD9E007AE5AC /* LYCGifViewCell.swift */; };
+		AA4B37021EEFCD9E007AE5AC /* LYCGifViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA4B37001EEFCD9E007AE5AC /* LYCGifViewCell.xib */; };
+		AA756AAC1EEE270700C142C7 /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA756AAA1EEE270700C142C7 /* QHNormalEmotionSort.plist */; };
+		AA756AAD1EEE270700C142C7 /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA756AAB1EEE270700C142C7 /* QHSohuGifSort.plist */; };
+		AA756AAF1EEE27E500C142C7 /* LYCEmotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AAE1EEE27E500C142C7 /* LYCEmotionModel.swift */; };
+		AA756AB11EEE284600C142C7 /* LYCEmotionPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AB01EEE284600C142C7 /* LYCEmotionPackage.swift */; };
+		AA756AB41EEE2A6E00C142C7 /* LYCEmotionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AB31EEE2A6E00C142C7 /* LYCEmotionViewModel.swift */; };
+		AA756AB71EEE2E9100C142C7 /* LYCChatToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AB61EEE2E9100C142C7 /* LYCChatToolView.swift */; };
+		AA756AB91EEE2EA700C142C7 /* LYCChatToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA756AB81EEE2EA700C142C7 /* LYCChatToolView.xib */; };
+		AA756ABC1EEE743000C142C7 /* LYCEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756ABB1EEE743000C142C7 /* LYCEmotionView.swift */; };
+		AA756AC41EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AC21EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift */; };
+		AA756AC51EEEAE1500C142C7 /* HYPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AC31EEEAE1500C142C7 /* HYPageCollectionView.swift */; };
+		AA756AC81EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA756AC61EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift */; };
+		AA756AC91EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA756AC71EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib */; };
+		AAE19BBC1EEFD83000F03B0A /* LYCGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE19BBB1EEFD83000F03B0A /* LYCGifView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYCSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCRoomViewController.swift; sourceTree = "<group>"; };
+		89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCRoomViewController.xib; sourceTree = "<group>"; };
+		89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmitterProtocol.swift; sourceTree = "<group>"; };
+		89DC69AE1EED332300B4BB19 /* LYCNibAbleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCNibAbleProtocol.swift; sourceTree = "<group>"; };
+		89FB2C971EEBB8A100CCE581 /* LYCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LYCMainViewController.swift; path = Controller/LYCMainViewController.swift; sourceTree = "<group>"; };
+		89FB2CA71EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCCollectionViewLayout.swift; sourceTree = "<group>"; };
+		89FB2CAF1EEBBCA600CCE581 /* LYCMainTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCMainTypeModel.swift; sourceTree = "<group>"; };
+		89FB2CB11EEBBCC700CCE581 /* LYCAnchorTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCAnchorTypeModel.swift; sourceTree = "<group>"; };
+		89FB2CB31EEBBCE400CCE581 /* LYCMainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCMainViewModel.swift; sourceTree = "<group>"; };
+		89FB2CB51EEBBD6500CCE581 /* LYCAnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCAnchorViewController.swift; sourceTree = "<group>"; };
+		89FB2CB81EEBBDB100CCE581 /* LYCUIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LYCUIColor-Extension.swift"; sourceTree = "<group>"; };
+		89FB2CBB1EEBBDF800CCE581 /* LYCConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCConst.swift; sourceTree = "<group>"; };
+		89FB2CBE1EEBBE2400CCE581 /* HYContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYContentView.swift; sourceTree = "<group>"; };
+		89FB2CBF1EEBBE2400CCE581 /* HYPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPageView.swift; sourceTree = "<group>"; };
+		89FB2CC01EEBBE2400CCE581 /* HYTitleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTitleStyle.swift; sourceTree = "<group>"; };
+		89FB2CC11EEBBE2400CCE581 /* HYTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTitleView.swift; sourceTree = "<group>"; };
+		89FB2CC61EEBBE8100CCE581 /* LYCNSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LYCNSDate-Extension.swift"; sourceTree = "<group>"; };
+		89FB2CC91EEBC0E000CCE581 /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		89FB2CCB1EEBC2C600CCE581 /* LYCBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCBaseModel.swift; sourceTree = "<group>"; };
+		89FB2CCD1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCAnchorCollectionViewCell.swift; sourceTree = "<group>"; };
+		89FB2CCE1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCAnchorCollectionViewCell.xib; sourceTree = "<group>"; };
+		89FB2CD21EEBE97000CCE581 /* LYCNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCNetworkTool.swift; sourceTree = "<group>"; };
+		9FC9BCE48F8F5DB96845D1E5 /* Pods-LYCSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYCSwiftDemo/Pods-LYCSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AA0C4DFF1EE94CE50032E05A /* LYCNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCNavigationViewController.swift; sourceTree = "<group>"; };
+		AA10A9FD1EE8136F00F6BEC5 /* LYCSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYCSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA10AA001EE8136F00F6BEC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA10AA021EE8136F00F6BEC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA10AA051EE8136F00F6BEC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA10AA071EE8136F00F6BEC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA10AA0A1EE8136F00F6BEC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA10AA0C1EE8136F00F6BEC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA10AA191EE8147700F6BEC5 /* LYCDiscorverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCDiscorverViewController.swift; sourceTree = "<group>"; };
+		AA10AA1D1EE8149700F6BEC5 /* LYCMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCMeViewController.swift; sourceTree = "<group>"; };
+		AA10AA1F1EE814A200F6BEC5 /* LYCRankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCRankViewController.swift; sourceTree = "<group>"; };
+		AA10AA211EE8165500F6BEC5 /* LYCTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCTabbarViewController.swift; sourceTree = "<group>"; };
+		AA10AA231EE817BE00F6BEC5 /* LYCSharedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCSharedViewController.swift; sourceTree = "<group>"; };
+		AA4B36F61EEF95C1007AE5AC /* LYCGifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCGifModel.swift; sourceTree = "<group>"; };
+		AA4B36F81EEF95F7007AE5AC /* LYCGifViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCGifViewModel.swift; sourceTree = "<group>"; };
+		AA4B36FF1EEFCD9E007AE5AC /* LYCGifViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCGifViewCell.swift; sourceTree = "<group>"; };
+		AA4B37001EEFCD9E007AE5AC /* LYCGifViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCGifViewCell.xib; sourceTree = "<group>"; };
+		AA756AAA1EEE270700C142C7 /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		AA756AAB1EEE270700C142C7 /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
+		AA756AAE1EEE27E500C142C7 /* LYCEmotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmotionModel.swift; sourceTree = "<group>"; };
+		AA756AB01EEE284600C142C7 /* LYCEmotionPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmotionPackage.swift; sourceTree = "<group>"; };
+		AA756AB31EEE2A6E00C142C7 /* LYCEmotionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmotionViewModel.swift; sourceTree = "<group>"; };
+		AA756AB61EEE2E9100C142C7 /* LYCChatToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCChatToolView.swift; sourceTree = "<group>"; };
+		AA756AB81EEE2EA700C142C7 /* LYCChatToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCChatToolView.xib; sourceTree = "<group>"; };
+		AA756ABB1EEE743000C142C7 /* LYCEmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmotionView.swift; sourceTree = "<group>"; };
+		AA756AC21EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPageCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		AA756AC31EEEAE1500C142C7 /* HYPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPageCollectionView.swift; sourceTree = "<group>"; };
+		AA756AC61EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA756AC71EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCEmotionCollectionViewCell.xib; sourceTree = "<group>"; };
+		AAE19BBB1EEFD83000F03B0A /* LYCGifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCGifView.swift; sourceTree = "<group>"; };
+		AC595064413AC0B2E9F906FB /* Pods-LYCSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYCSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYCSwiftDemo/Pods-LYCSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA10A9FA1EE8136F00F6BEC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A2F856AD02666B4FA6A5BB2 /* Pods_LYCSwiftDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11E15BD62D44D064A6A30C92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89CAE8B41EECE77400CE8BBD /* live */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AB21EEE2A5400C142C7 /* ViewModel */,
+				89CAE8B51EECE77400CE8BBD /* Controller */,
+				89CAE8B61EECE77400CE8BBD /* Model */,
+				89CAE8B71EECE77400CE8BBD /* View */,
+			);
+			path = live;
+			sourceTree = "<group>";
+		};
+		89CAE8B51EECE77400CE8BBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89CAE8B61EECE77400CE8BBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AAE1EEE27E500C142C7 /* LYCEmotionModel.swift */,
+				AA756AB01EEE284600C142C7 /* LYCEmotionPackage.swift */,
+				AA4B36F61EEF95C1007AE5AC /* LYCGifModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89CAE8B71EECE77400CE8BBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA4B36FA1EEFBA91007AE5AC /* GifView */,
+				AA756ABA1EEE740C00C142C7 /* EmotionView */,
+				AA756AB51EEE2E7B00C142C7 /* ChatToolView */,
+				89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */,
+				89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89CAE8C01EED088E00CE8BBD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */,
+				89DC69AE1EED332300B4BB19 /* LYCNibAbleProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		89FB2C9A1EEBB8C000CCE581 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2C971EEBB8A100CCE581 /* LYCMainViewController.swift */,
+				89FB2CB51EEBBD6500CCE581 /* LYCAnchorViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		89FB2CA61EEBBB7400CCE581 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CA71EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift */,
+				89FB2CB31EEBBCE400CCE581 /* LYCMainViewModel.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		89FB2CA91EEBBBCC00CCE581 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CCD1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift */,
+				89FB2CCE1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89FB2CAE1EEBBC4900CCE581 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CAF1EEBBCA600CCE581 /* LYCMainTypeModel.swift */,
+				89FB2CB11EEBBCC700CCE581 /* LYCAnchorTypeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89FB2CB71EEBBD9A00CCE581 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CB81EEBBDB100CCE581 /* LYCUIColor-Extension.swift */,
+				89FB2CC61EEBBE8100CCE581 /* LYCNSDate-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		89FB2CBA1EEBBDDB00CCE581 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CBB1EEBBDF800CCE581 /* LYCConst.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		89FB2CBD1EEBBE2400CCE581 /* HYPageView */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AC21EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift */,
+				AA756AC31EEEAE1500C142C7 /* HYPageCollectionView.swift */,
+				89FB2CBE1EEBBE2400CCE581 /* HYContentView.swift */,
+				89FB2CBF1EEBBE2400CCE581 /* HYPageView.swift */,
+				89FB2CC01EEBBE2400CCE581 /* HYTitleStyle.swift */,
+				89FB2CC11EEBBE2400CCE581 /* HYTitleView.swift */,
+			);
+			path = HYPageView;
+			sourceTree = "<group>";
+		};
+		89FB2CC81EEBC0CC00CCE581 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AAA1EEE270700C142C7 /* QHNormalEmotionSort.plist */,
+				AA756AAB1EEE270700C142C7 /* QHSohuGifSort.plist */,
+				89FB2CC91EEBC0E000CCE581 /* types.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		89FB2CD11EEBE94F00CCE581 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CD21EEBE97000CCE581 /* LYCNetworkTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		AA10A9F41EE8136F00F6BEC5 = {
+			isa = PBXGroup;
+			children = (
+				AA10A9FF1EE8136F00F6BEC5 /* LYCSwiftDemo */,
+				AA10A9FE1EE8136F00F6BEC5 /* Products */,
+				B3DAD19F5D15FEBBD5B2DF81 /* Pods */,
+				11E15BD62D44D064A6A30C92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA10A9FE1EE8136F00F6BEC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA10A9FD1EE8136F00F6BEC5 /* LYCSwiftDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA10A9FF1EE8136F00F6BEC5 /* LYCSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CC81EEBC0CC00CCE581 /* Resource */,
+				AA10AA121EE8143F00F6BEC5 /* Classes */,
+				AA10AA001EE8136F00F6BEC5 /* AppDelegate.swift */,
+				AA10AA021EE8136F00F6BEC5 /* ViewController.swift */,
+				AA10AA041EE8136F00F6BEC5 /* Main.storyboard */,
+				AA10AA071EE8136F00F6BEC5 /* Assets.xcassets */,
+				AA10AA091EE8136F00F6BEC5 /* LaunchScreen.storyboard */,
+				AA10AA0C1EE8136F00F6BEC5 /* Info.plist */,
+			);
+			path = LYCSwiftDemo;
+			sourceTree = "<group>";
+		};
+		AA10AA121EE8143F00F6BEC5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA10AA141EE8143F00F6BEC5 /* Component */,
+				AA10AA131EE8143F00F6BEC5 /* Base */,
+				89FB2CD11EEBE94F00CCE581 /* Tools */,
+				89CAE8B41EECE77400CE8BBD /* live */,
+				AA10AA161EE8143F00F6BEC5 /* Main */,
+				AA10AA181EE8143F00F6BEC5 /* Rank */,
+				AA10AA151EE8143F00F6BEC5 /* Discorver */,
+				AA10AA171EE8143F00F6BEC5 /* Me */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AA10AA131EE8143F00F6BEC5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AA10AA211EE8165500F6BEC5 /* LYCTabbarViewController.swift */,
+				AA0C4DFF1EE94CE50032E05A /* LYCNavigationViewController.swift */,
+				AA10AA231EE817BE00F6BEC5 /* LYCSharedViewController.swift */,
+				89FB2CCB1EEBC2C600CCE581 /* LYCBaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AA10AA141EE8143F00F6BEC5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				89CAE8C01EED088E00CE8BBD /* Protocol */,
+				89FB2CBD1EEBBE2400CCE581 /* HYPageView */,
+				89FB2CBA1EEBBDDB00CCE581 /* Common */,
+				89FB2CB71EEBBD9A00CCE581 /* Extension */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		AA10AA151EE8143F00F6BEC5 /* Discorver */ = {
+			isa = PBXGroup;
+			children = (
+				AA10AA191EE8147700F6BEC5 /* LYCDiscorverViewController.swift */,
+			);
+			path = Discorver;
+			sourceTree = "<group>";
+		};
+		AA10AA161EE8143F00F6BEC5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				89FB2CA61EEBBB7400CCE581 /* Other */,
+				89FB2C9A1EEBB8C000CCE581 /* Controller */,
+				89FB2CAE1EEBBC4900CCE581 /* Model */,
+				89FB2CA91EEBBBCC00CCE581 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA10AA171EE8143F00F6BEC5 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				AA10AA1D1EE8149700F6BEC5 /* LYCMeViewController.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		AA10AA181EE8143F00F6BEC5 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				AA10AA1F1EE814A200F6BEC5 /* LYCRankViewController.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		AA4B36FA1EEFBA91007AE5AC /* GifView */ = {
+			isa = PBXGroup;
+			children = (
+				AAE19BBB1EEFD83000F03B0A /* LYCGifView.swift */,
+				AA4B36FF1EEFCD9E007AE5AC /* LYCGifViewCell.swift */,
+				AA4B37001EEFCD9E007AE5AC /* LYCGifViewCell.xib */,
+			);
+			path = GifView;
+			sourceTree = "<group>";
+		};
+		AA756AB21EEE2A5400C142C7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AB31EEE2A6E00C142C7 /* LYCEmotionViewModel.swift */,
+				AA4B36F81EEF95F7007AE5AC /* LYCGifViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA756AB51EEE2E7B00C142C7 /* ChatToolView */ = {
+			isa = PBXGroup;
+			children = (
+				AA756AB61EEE2E9100C142C7 /* LYCChatToolView.swift */,
+				AA756AB81EEE2EA700C142C7 /* LYCChatToolView.xib */,
+			);
+			path = ChatToolView;
+			sourceTree = "<group>";
+		};
+		AA756ABA1EEE740C00C142C7 /* EmotionView */ = {
+			isa = PBXGroup;
+			children = (
+				AA756ABB1EEE743000C142C7 /* LYCEmotionView.swift */,
+				AA756AC61EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift */,
+				AA756AC71EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib */,
+			);
+			path = EmotionView;
+			sourceTree = "<group>";
+		};
+		B3DAD19F5D15FEBBD5B2DF81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FC9BCE48F8F5DB96845D1E5 /* Pods-LYCSwiftDemo.debug.xcconfig */,
+				AC595064413AC0B2E9F906FB /* Pods-LYCSwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA10A9FC1EE8136F00F6BEC5 /* LYCSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA10AA0F1EE8136F00F6BEC5 /* Build configuration list for PBXNativeTarget "LYCSwiftDemo" */;
+			buildPhases = (
+				6805454DD3B46305FFE92DA3 /* [CP] Check Pods Manifest.lock */,
+				AA10A9F91EE8136F00F6BEC5 /* Sources */,
+				AA10A9FA1EE8136F00F6BEC5 /* Frameworks */,
+				AA10A9FB1EE8136F00F6BEC5 /* Resources */,
+				6FCD58AB8E615606747762D3 /* [CP] Embed Pods Frameworks */,
+				BD087597FCA894905D8C26B1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYCSwiftDemo;
+			productName = LYCSwiftDemo;
+			productReference = AA10A9FD1EE8136F00F6BEC5 /* LYCSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA10A9F51EE8136F00F6BEC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LYC;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = zsc;
+				TargetAttributes = {
+					AA10A9FC1EE8136F00F6BEC5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = FD3FY3GTVB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AA10A9F81EE8136F00F6BEC5 /* Build configuration list for PBXProject "LYCSwiftDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA10A9F41EE8136F00F6BEC5;
+			productRefGroup = AA10A9FE1EE8136F00F6BEC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA10A9FC1EE8136F00F6BEC5 /* LYCSwiftDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA10A9FB1EE8136F00F6BEC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA756AC91EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib in Resources */,
+				AA10AA0B1EE8136F00F6BEC5 /* LaunchScreen.storyboard in Resources */,
+				AA4B37021EEFCD9E007AE5AC /* LYCGifViewCell.xib in Resources */,
+				AA10AA081EE8136F00F6BEC5 /* Assets.xcassets in Resources */,
+				89FB2CD01EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib in Resources */,
+				AA756AB91EEE2EA700C142C7 /* LYCChatToolView.xib in Resources */,
+				AA756AAD1EEE270700C142C7 /* QHSohuGifSort.plist in Resources */,
+				89CAE8BF1EECF1F100CE8BBD /* LYCRoomViewController.xib in Resources */,
+				89FB2CCA1EEBC0E000CCE581 /* types.plist in Resources */,
+				AA756AAC1EEE270700C142C7 /* QHNormalEmotionSort.plist in Resources */,
+				AA10AA061EE8136F00F6BEC5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6805454DD3B46305FFE92DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6FCD58AB8E615606747762D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYCSwiftDemo/Pods-LYCSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD087597FCA894905D8C26B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYCSwiftDemo/Pods-LYCSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA10A9F91EE8136F00F6BEC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA10AA031EE8136F00F6BEC5 /* ViewController.swift in Sources */,
+				89FB2CB91EEBBDB100CCE581 /* LYCUIColor-Extension.swift in Sources */,
+				AA10AA1E1EE8149700F6BEC5 /* LYCMeViewController.swift in Sources */,
+				89DC69AF1EED332300B4BB19 /* LYCNibAbleProtocol.swift in Sources */,
+				AA0C4E001EE94CE50032E05A /* LYCNavigationViewController.swift in Sources */,
+				AA10AA221EE8165500F6BEC5 /* LYCTabbarViewController.swift in Sources */,
+				AA10AA1A1EE8147700F6BEC5 /* LYCDiscorverViewController.swift in Sources */,
+				AA756AC41EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift in Sources */,
+				AA756AB41EEE2A6E00C142C7 /* LYCEmotionViewModel.swift in Sources */,
+				89FB2CBC1EEBBDF800CCE581 /* LYCConst.swift in Sources */,
+				AA756AB11EEE284600C142C7 /* LYCEmotionPackage.swift in Sources */,
+				AA4B36F71EEF95C1007AE5AC /* LYCGifModel.swift in Sources */,
+				89CAE8C21EED08B000CE8BBD /* LYCEmitterProtocol.swift in Sources */,
+				89FB2CC31EEBBE2400CCE581 /* HYPageView.swift in Sources */,
+				89FB2CA81EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift in Sources */,
+				AA756ABC1EEE743000C142C7 /* LYCEmotionView.swift in Sources */,
+				89FB2CC71EEBBE8100CCE581 /* LYCNSDate-Extension.swift in Sources */,
+				AA756AAF1EEE27E500C142C7 /* LYCEmotionModel.swift in Sources */,
+				89FB2CC41EEBBE2400CCE581 /* HYTitleStyle.swift in Sources */,
+				89FB2C981EEBB8A100CCE581 /* LYCMainViewController.swift in Sources */,
+				AA4B37011EEFCD9E007AE5AC /* LYCGifViewCell.swift in Sources */,
+				AA756AB71EEE2E9100C142C7 /* LYCChatToolView.swift in Sources */,
+				89CAE8BE1EECF1F100CE8BBD /* LYCRoomViewController.swift in Sources */,
+				89FB2CB41EEBBCE400CCE581 /* LYCMainViewModel.swift in Sources */,
+				89FB2CC51EEBBE2400CCE581 /* HYTitleView.swift in Sources */,
+				AA4B36F91EEF95F7007AE5AC /* LYCGifViewModel.swift in Sources */,
+				89FB2CB01EEBBCA600CCE581 /* LYCMainTypeModel.swift in Sources */,
+				AAE19BBC1EEFD83000F03B0A /* LYCGifView.swift in Sources */,
+				89FB2CD31EEBE97000CCE581 /* LYCNetworkTool.swift in Sources */,
+				AA756AC81EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift in Sources */,
+				89FB2CB61EEBBD6500CCE581 /* LYCAnchorViewController.swift in Sources */,
+				AA10AA011EE8136F00F6BEC5 /* AppDelegate.swift in Sources */,
+				89FB2CCC1EEBC2C600CCE581 /* LYCBaseModel.swift in Sources */,
+				89FB2CCF1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift in Sources */,
+				AA10AA241EE817BE00F6BEC5 /* LYCSharedViewController.swift in Sources */,
+				AA756AC51EEEAE1500C142C7 /* HYPageCollectionView.swift in Sources */,
+				AA10AA201EE814A200F6BEC5 /* LYCRankViewController.swift in Sources */,
+				89FB2CB21EEBBCC700CCE581 /* LYCAnchorTypeModel.swift in Sources */,
+				89FB2CC21EEBBE2400CCE581 /* HYContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA10AA041EE8136F00F6BEC5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA10AA051EE8136F00F6BEC5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA10AA091EE8136F00F6BEC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA10AA0A1EE8136F00F6BEC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA10AA0D1EE8136F00F6BEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA10AA0E1EE8136F00F6BEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA10AA101EE8136F00F6BEC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC9BCE48F8F5DB96845D1E5 /* Pods-LYCSwiftDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FD3FY3GTVB;
+				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyc.LYCSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AA10AA111EE8136F00F6BEC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC595064413AC0B2E9F906FB /* Pods-LYCSwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FD3FY3GTVB;
+				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyc.LYCSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA10A9F81EE8136F00F6BEC5 /* Build configuration list for PBXProject "LYCSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA10AA0D1EE8136F00F6BEC5 /* Debug */,
+				AA10AA0E1EE8136F00F6BEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA10AA0F1EE8136F00F6BEC5 /* Build configuration list for PBXNativeTarget "LYCSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA10AA101EE8136F00F6BEC5 /* Debug */,
+				AA10AA111EE8136F00F6BEC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA10A9F51EE8136F00F6BEC5 /* Project object */;
+}

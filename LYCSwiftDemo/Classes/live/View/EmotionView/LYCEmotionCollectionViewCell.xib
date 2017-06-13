@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LYCEmotionCollectionViewCell" customModule="LYCSwiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="109" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="109" height="95"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-xX-fs7">
+                        <rect key="frame" x="0.0" y="0.0" width="109" height="95"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="h5C-xX-fs7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZxU-6L-moM"/>
+                <constraint firstAttribute="bottom" secondItem="h5C-xX-fs7" secondAttribute="bottom" id="onx-IO-E4h"/>
+                <constraint firstAttribute="trailing" secondItem="h5C-xX-fs7" secondAttribute="trailing" id="txC-vA-TaV"/>
+                <constraint firstItem="h5C-xX-fs7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="u5F-D2-bNH"/>
+            </constraints>
+            <size key="customSize" width="109" height="95"/>
+            <connections>
+                <outlet property="emotionImageView" destination="h5C-xX-fs7" id="buM-B7-oRn"/>
+            </connections>
+            <point key="canvasLocation" x="54.5" y="74.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

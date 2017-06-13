@@ -1,0 +1,6 @@
+framework module Pods_LYCSwiftDemo {
+  umbrella header "Pods-LYCSwiftDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

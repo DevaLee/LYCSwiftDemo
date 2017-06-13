@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LYCAnchorCollectionViewCell" customModule="LYCSwiftDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-fi-gtc">
+                        <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="120" translatesAutoresizingMaskIntoConstraints="NO" id="xMh-GV-dtE">
+                        <rect key="frame" x="0.0" y="160" width="139" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="fjb-Ky-B2J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-3B-4pF">
+                        <rect key="frame" x="139" y="160" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gye-A7-8E2"/>
+                            <constraint firstAttribute="width" constant="42" id="pUK-QO-fnc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="lDr-lY-duM">
+                        <rect key="frame" x="153" y="5" width="23" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="ojb-BU-HE3"/>
+                            <constraint firstAttribute="width" constant="23" id="v3k-ut-EFS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xMh-GV-dtE" secondAttribute="bottom" id="3i1-qA-96n"/>
+                <constraint firstAttribute="trailing" secondItem="lDr-lY-duM" secondAttribute="trailing" constant="5" id="7J2-ZC-b7n"/>
+                <constraint firstItem="lDr-lY-duM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="9eZ-2o-OWE"/>
+                <constraint firstAttribute="bottom" secondItem="KVt-3B-4pF" secondAttribute="bottom" id="9lF-aw-kwb"/>
+                <constraint firstAttribute="bottom" secondItem="dAa-fi-gtc" secondAttribute="bottom" id="IY8-RO-Xdl"/>
+                <constraint firstAttribute="trailing" secondItem="KVt-3B-4pF" secondAttribute="trailing" id="MOf-1O-fOd"/>
+                <constraint firstItem="dAa-fi-gtc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="X1b-xX-PIL"/>
+                <constraint firstItem="KVt-3B-4pF" firstAttribute="leading" secondItem="xMh-GV-dtE" secondAttribute="trailing" id="haw-3a-Leg"/>
+                <constraint firstItem="xMh-GV-dtE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ilV-77-erG"/>
+                <constraint firstItem="dAa-fi-gtc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="m0V-af-g4U"/>
+                <constraint firstAttribute="trailing" secondItem="dAa-fi-gtc" secondAttribute="trailing" id="yek-te-FZX"/>
+            </constraints>
+            <size key="customSize" width="181" height="169"/>
+            <connections>
+                <outlet property="bgImageView" destination="dAa-fi-gtc" id="7zl-hc-tyf"/>
+                <outlet property="liveIconImageView" destination="lDr-lY-duM" id="h4c-8f-ubh"/>
+                <outlet property="nickNameLabel" destination="xMh-GV-dtE" id="8Gc-u6-WIg"/>
+                <outlet property="onlineNumLabel" destination="KVt-3B-4pF" id="Vm9-Ye-vTb"/>
+            </connections>
+            <point key="canvasLocation" x="90.5" y="-7.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+    </resources>
+</document>
