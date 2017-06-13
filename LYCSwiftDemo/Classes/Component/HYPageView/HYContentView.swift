@@ -164,11 +164,15 @@ extension HYContentView : UICollectionViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         delegate?.contentViewEndScroll?(self)
+        scrollView.isScrollEnabled = true
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        // 静止
         if !decelerate {
             delegate?.contentViewEndScroll?(self)
+        }else{
+            scrollView.isScrollEnabled = false
         }
     }
 }
