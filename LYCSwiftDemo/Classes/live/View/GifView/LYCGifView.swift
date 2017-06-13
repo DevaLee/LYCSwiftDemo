@@ -13,10 +13,10 @@ private let kGifCellId = "kGifCellId"
 class LYCGifView: UIView {
     
     fileprivate lazy var gifCollectionView : HYPageCollectionView =  {
-        let rect = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: 280)
+        let rect = CGRect(x: 0, y: 0, width: kScreenWidth, height: 280)
         let titles = ["礼物"]
         let style = HYTitleStyle()
-        style.isShowBottomLine = true
+        style.isShowBottomLine = false
         let layout = HYPageCollectionFlowLayout()
         layout.cols = 4
         layout.rows = 2
@@ -60,7 +60,10 @@ extension LYCGifView : HYPageCollectionViewDataSource{
     }
     
     func collection(_ pageCollectionView: HYPageCollectionView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView .dequeueReusableCell(withReuseIdentifier: kGifCellId, for: indexPath)
+        let cell = collectionView .dequeueReusableCell(withReuseIdentifier: kGifCellId, for: indexPath) as! LYCGifViewCell
+        let gifModel = LYCGifViewModel.shareInstance.gifPackage[indexPath.row]
+        cell.gifModel = gifModel
+        
         return cell
     }
 

@@ -16,12 +16,15 @@ class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
     @IBOutlet weak var bgImageView: UIImageView!
     
     fileprivate lazy var chatToolsView : LYCChatToolView = LYCChatToolView.loadNibAble()
-//    fileprivate lazy var gifView : LYCGifView = {
-//        //let gifView = LYCGifView
-//    
-//    }
+    fileprivate lazy var giftView : LYCGifView = {
+        
+        let rect = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: 280)
+        let gifView = LYCGifView(frame:rect)
+        
+        return gifView
     
-   
+    }()
+    
     // MARK: 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +78,8 @@ extension LYCRoomViewController {
     private func setupGifView(){
         LYCGifViewModel.shareInstance.loadGifData(finishCallBack: {
             print("ddd")
-            
-
+            self.view.addSubview(self.giftView)
+            self.view.bringSubview(toFront: self.giftView)
         })
     
     }
@@ -103,7 +106,10 @@ extension LYCRoomViewController {
         case 1:
             print("点击了分享")
         case 2:
-            print("点击了礼物")
+           let gifViewY = kScreenHeight - giftView.frame.height
+           UIView.animate(withDuration: 0.5, animations: {
+                 self.giftView.frame.origin.y = gifViewY
+           })
         case 3:
             print("点击了更多")
         case 4:

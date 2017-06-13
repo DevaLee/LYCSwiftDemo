@@ -10,9 +10,22 @@ import UIKit
 
 class LYCGifViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var gifNameLabel: UILabel!
+    
+    @IBOutlet weak var gifCostLabel: UILabel!
+    @IBOutlet weak var gifImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    var gifModel : LYCGifModel? {
+        didSet {
+            gifNameLabel.text = gifModel?.subject
+            gifCostLabel.text = "\(String(describing: gifModel?.coin))"
+            
+//            let resource = Resource(
+//            gifImageView.kf_setImage(with: <#T##Resource?#>, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        }
+    
+    }
 }
