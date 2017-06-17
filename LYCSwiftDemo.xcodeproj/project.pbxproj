@@ -16,6 +16,11 @@
 		892158FF1EF4BE7C00BA1D56 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 892158F71EF4BE7C00BA1D56 /* yudpsocket.c */; };
 		892159001EF4BE7C00BA1D56 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */; };
 		892159181EF4C08B00BA1D56 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892159171EF4C08B00BA1D56 /* Immessage.proto.swift */; };
+		89B8FA8B1EF52ADD00C268E3 /* LYCChatContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8FA8A1EF52ADD00C268E3 /* LYCChatContainerView.swift */; };
+		89B8FA8D1EF52AFE00C268E3 /* LYCChatContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B8FA8C1EF52AFE00C268E3 /* LYCChatContainerView.xib */; };
+		89B8FA901EF52BA600C268E3 /* LYCChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8FA8E1EF52BA600C268E3 /* LYCChatTableViewCell.swift */; };
+		89B8FA911EF52BA600C268E3 /* LYCChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B8FA8F1EF52BA600C268E3 /* LYCChatTableViewCell.xib */; };
+		89B8FA941EF568A600C268E3 /* LYCMAttributStingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B8FA931EF568A600C268E3 /* LYCMAttributStingExtension.swift */; };
 		89CAE8BE1EECF1F100CE8BBD /* LYCRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */; };
 		89CAE8BF1EECF1F100CE8BBD /* LYCRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */; };
 		89CAE8C21EED08B000CE8BBD /* LYCEmitterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */; };
@@ -79,6 +84,11 @@
 		892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		892159011EF4BF1000BA1D56 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
 		892159171EF4C08B00BA1D56 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		89B8FA8A1EF52ADD00C268E3 /* LYCChatContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCChatContainerView.swift; sourceTree = "<group>"; };
+		89B8FA8C1EF52AFE00C268E3 /* LYCChatContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCChatContainerView.xib; sourceTree = "<group>"; };
+		89B8FA8E1EF52BA600C268E3 /* LYCChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCChatTableViewCell.swift; sourceTree = "<group>"; };
+		89B8FA8F1EF52BA600C268E3 /* LYCChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCChatTableViewCell.xib; sourceTree = "<group>"; };
+		89B8FA931EF568A600C268E3 /* LYCMAttributStingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCMAttributStingExtension.swift; sourceTree = "<group>"; };
 		89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCRoomViewController.swift; sourceTree = "<group>"; };
 		89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCRoomViewController.xib; sourceTree = "<group>"; };
 		89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmitterProtocol.swift; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				892158EF1EF4BE7C00BA1D56 /* YCSocket */,
+				89B8FA891EF52AAB00C268E3 /* View */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -185,6 +196,17 @@
 				892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */,
 			);
 			path = ysocket;
+			sourceTree = "<group>";
+		};
+		89B8FA891EF52AAB00C268E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89B8FA8A1EF52ADD00C268E3 /* LYCChatContainerView.swift */,
+				89B8FA8C1EF52AFE00C268E3 /* LYCChatContainerView.xib */,
+				89B8FA8E1EF52BA600C268E3 /* LYCChatTableViewCell.swift */,
+				89B8FA8F1EF52BA600C268E3 /* LYCChatTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		89CAE8B41EECE77400CE8BBD /* live */ = {
@@ -277,6 +299,7 @@
 			children = (
 				89FB2CB81EEBBDB100CCE581 /* LYCUIColor-Extension.swift */,
 				89FB2CC61EEBBE8100CCE581 /* LYCNSDate-Extension.swift */,
+				89B8FA931EF568A600C268E3 /* LYCMAttributStingExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -509,7 +532,7 @@
 				TargetAttributes = {
 					AA10A9FC1EE8136F00F6BEC5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = FD3FY3GTVB;
+						DevelopmentTeam = MQT5PJ7GA8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -537,12 +560,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B8FA911EF52BA600C268E3 /* LYCChatTableViewCell.xib in Resources */,
 				892158F91EF4BE7C00BA1D56 /* IMMessage.proto in Resources */,
 				AA756AC91EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib in Resources */,
 				AA10AA0B1EE8136F00F6BEC5 /* LaunchScreen.storyboard in Resources */,
 				AA4B37021EEFCD9E007AE5AC /* LYCGifViewCell.xib in Resources */,
 				AA10AA081EE8136F00F6BEC5 /* Assets.xcassets in Resources */,
 				89FB2CD01EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.xib in Resources */,
+				89B8FA8D1EF52AFE00C268E3 /* LYCChatContainerView.xib in Resources */,
 				AA756AB91EEE2EA700C142C7 /* LYCChatToolView.xib in Resources */,
 				AA756AAD1EEE270700C142C7 /* QHSohuGifSort.plist in Resources */,
 				89CAE8BF1EECF1F100CE8BBD /* LYCRoomViewController.xib in Resources */,
@@ -613,6 +638,7 @@
 				AA10AA1E1EE8149700F6BEC5 /* LYCMeViewController.swift in Sources */,
 				89DC69AF1EED332300B4BB19 /* LYCNibAbleProtocol.swift in Sources */,
 				AA0C4E001EE94CE50032E05A /* LYCNavigationViewController.swift in Sources */,
+				89B8FA941EF568A600C268E3 /* LYCMAttributStingExtension.swift in Sources */,
 				AA10AA221EE8165500F6BEC5 /* LYCTabbarViewController.swift in Sources */,
 				AA10AA1A1EE8147700F6BEC5 /* LYCDiscorverViewController.swift in Sources */,
 				AA756AC41EEEAE1500C142C7 /* HYPageCollectionFlowLayout.swift in Sources */,
@@ -639,6 +665,7 @@
 				89FB2CC51EEBBE2400CCE581 /* HYTitleView.swift in Sources */,
 				AA4B36F91EEF95F7007AE5AC /* LYCGifViewModel.swift in Sources */,
 				89FB2CB01EEBBCA600CCE581 /* LYCMainTypeModel.swift in Sources */,
+				89B8FA901EF52BA600C268E3 /* LYCChatTableViewCell.swift in Sources */,
 				AAE19BBC1EEFD83000F03B0A /* LYCGifView.swift in Sources */,
 				89FB2CD31EEBE97000CCE581 /* LYCNetworkTool.swift in Sources */,
 				AA756AC81EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.swift in Sources */,
@@ -649,6 +676,7 @@
 				892158FC1EF4BE7C00BA1D56 /* ysocket.swift in Sources */,
 				AA10AA241EE817BE00F6BEC5 /* LYCSharedViewController.swift in Sources */,
 				AA756AC51EEEAE1500C142C7 /* HYPageCollectionView.swift in Sources */,
+				89B8FA8B1EF52ADD00C268E3 /* LYCChatContainerView.swift in Sources */,
 				892158FF1EF4BE7C00BA1D56 /* yudpsocket.c in Sources */,
 				AA10AA201EE814A200F6BEC5 /* LYCRankViewController.swift in Sources */,
 				89FB2CB21EEBBCC700CCE581 /* LYCAnchorTypeModel.swift in Sources */,
@@ -776,7 +804,7 @@
 			baseConfigurationReference = 9FC9BCE48F8F5DB96845D1E5 /* Pods-LYCSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FD3FY3GTVB;
+				DEVELOPMENT_TEAM = MQT5PJ7GA8;
 				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -791,7 +819,7 @@
 			baseConfigurationReference = AC595064413AC0B2E9F906FB /* Pods-LYCSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FD3FY3GTVB;
+				DEVELOPMENT_TEAM = MQT5PJ7GA8;
 				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

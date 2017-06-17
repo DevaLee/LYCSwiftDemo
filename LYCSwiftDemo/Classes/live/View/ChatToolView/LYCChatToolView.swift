@@ -74,6 +74,11 @@ extension LYCChatToolView : UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.sendButton.isEnabled = true
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        self.sendButton.isEnabled = true
+        return true
+    }
 
 }
 

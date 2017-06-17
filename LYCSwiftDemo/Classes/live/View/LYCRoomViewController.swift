@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 fileprivate let kChatToolViewHeight : CGFloat = 44.0
 
 class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
@@ -16,6 +16,7 @@ class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
     @IBOutlet weak var bgImageView: UIImageView!
     fileprivate var timer : Timer?
     fileprivate lazy var chatToolsView : LYCChatToolView = LYCChatToolView.loadNibAble()
+    fileprivate lazy var chatContainerView : LYCChatContainerView = LYCChatContainerView.loadNibAble()
     
     fileprivate lazy var giftView : LYCGifView = {
         let rect = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: 280)
@@ -62,11 +63,19 @@ class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
 // MARK:- 设置UI界面内容
 extension LYCRoomViewController {
     fileprivate func setupUI() {
+        setupChatContainerView()
         setupBlurView()
         setupBottomView()
         setupGifView()
         
     }
+    //设置聊天框
+    private func setupChatContainerView(){
+        chatContainerView.frame = CGRect(x: 0, y: self.view.frame.height - 200 - 44 , width: kScreenWidth, height: 200)
+        chatContainerView.backgroundColor = UIColor.clear
+        view.addSubview(chatContainerView);
+    }
+    
     // 设置毛玻璃
     private func setupBlurView() {
         let blur = UIBlurEffect(style: .dark)
@@ -83,13 +92,12 @@ extension LYCRoomViewController {
         view.addSubview(chatToolsView)
 
     }
-    
+    // 设置礼物界面
     private func setupGifView(){
         LYCGifViewModel.shareInstance.loadGifData(finishCallBack: {
             self.view.addSubview(self.giftView)
             self.view.bringSubview(toFront: self.giftView)
         })
-    
     }
 }
 
@@ -142,6 +150,8 @@ extension LYCRoomViewController {
     
     @objc fileprivate func keyBoardWillChangeFrame (_ notify : Notification){
         
+        chatToolsView.sendButton.isEnabled = true
+        
         let userInfo = notify.userInfo as! Dictionary<String, Any>
         let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! Double
         let value = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
@@ -149,6 +159,7 @@ extension LYCRoomViewController {
         let chatToolY = keyBoardFrame.minY - kChatToolViewHeight
         UIView.animate(withDuration: duration) {
             self.chatToolsView.frame.origin.y = chatToolY
+            self.chatContainerView.frame.origin.y = chatToolY - self.chatContainerView.frame.height
         }
     }
     
@@ -181,21 +192,23 @@ extension LYCRoomViewController : LYCGifViewDelegate{
 extension LYCRoomViewController : YCSocketDelegate{
     
     func socket(_ socket: YCSocket, joinRoom userInfo: UserInfo) {
-        print(userInfo.name + ":加入房间" )
         
+      let attrSting = LYCMAttributStingExtension.userJoinLeaveRoom(userName: userInfo.name, isJoinRoom: true)
+        chatContainerView.addAttributeStringReloadData(attrSting: attrSting)
     }
     
     func socket(_ socket: YCSocket, leaveRoom userInfo: UserInfo) {
-        print(userInfo.name + ":离开房间")
-        
+        let attrSting = LYCMAttributStingExtension.userJoinLeaveRoom(userName: userInfo.name, isJoinRoom: false)
+        chatContainerView.addAttributeStringReloadData(attrSting: attrSting)
     }
     
     func socket(_ socket: YCSocket, chatMsg: TextMessage) {
-        print(chatMsg.user.name + ":" + chatMsg.text)
+        let attrSting = LYCMAttributStingExtension.userSendMsg(userName: chatMsg.user.name, chatMsg: chatMsg.text)
+        chatContainerView.addAttributeStringReloadData(attrSting: attrSting)
     }
     
     func socket(_ socket: YCSocket, sendGif gif: GiftMessage) {
-        print(gif.user.name + " 送出 " + gif.giftname)
-        
+       let attrSting = LYCMAttributStingExtension.sendGif(userName: gif.user.name, gifUrl: gif.giftUrl, gifName: gif.giftname)
+        chatContainerView.addAttributeStringReloadData(attrSting: attrSting)
     }
 }

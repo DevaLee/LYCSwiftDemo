@@ -20,7 +20,8 @@ class LYCGifView: UIView {
         let rect = CGRect(x: 0, y: 0, width: kScreenWidth, height: 280)
         let titles = ["礼物"]
         let style = HYTitleStyle()
-        style.isShowBottomLine = false
+        style.isShowBottomLine = true
+        
         style.titleBackgroundColor = UIColor.black
         let layout = HYPageCollectionFlowLayout()
         layout.cols = 4
@@ -28,6 +29,7 @@ class LYCGifView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
         let gifView = HYPageCollectionView(frame: rect, titles:titles , style: style, isTitleInTop: false, layout: layout)
+        gifView.backgroundColor = UIColor.black
         let nib = UINib(nibName: "LYCGifViewCell", bundle: nil)
         gifView.register(nib: nib , identifier: kGifCellId)
         gifView.datasoure = self
