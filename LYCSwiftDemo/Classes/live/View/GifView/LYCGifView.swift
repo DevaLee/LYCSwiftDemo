@@ -9,8 +9,12 @@
 import UIKit
 
 private let kGifCellId = "kGifCellId"
+@objc protocol LYCGifViewDelegate :NSObjectProtocol {
+    @objc optional func gitView(_ gifView : LYCGifView ,collectionView : UICollectionView , didSelectRowAtIndex  indexPath : IndexPath , gifModel : LYCGifModel)
+}
 
 class LYCGifView: UIView {
+    weak var deleage : LYCGifViewDelegate?
     
     fileprivate lazy var gifCollectionView : HYPageCollectionView =  {
         let rect = CGRect(x: 0, y: 0, width: kScreenWidth, height: 280)
@@ -27,9 +31,11 @@ class LYCGifView: UIView {
         let nib = UINib(nibName: "LYCGifViewCell", bundle: nil)
         gifView.register(nib: nib , identifier: kGifCellId)
         gifView.datasoure = self
+        gifView.delegate = self
         return gifView
     }()
     fileprivate lazy var gifVM   : LYCGifViewModel = LYCGifViewModel()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
   
@@ -41,7 +47,7 @@ class LYCGifView: UIView {
     }
   
 }
-
+//MARK:-初始化UI
 extension LYCGifView {
     
     func setupUI(){
@@ -50,6 +56,7 @@ extension LYCGifView {
 
 }
 
+//MARK:- 数据源方法
 extension LYCGifView : HYPageCollectionViewDataSource{
     
     func numberOfSections(pageCollectionView: HYPageCollectionView) -> Int {
@@ -67,5 +74,12 @@ extension LYCGifView : HYPageCollectionViewDataSource{
         
         return cell
     }
-
+}
+//MARK:- 代理方法
+extension LYCGifView : HYPageCollectionViewDelegate{
+    
+    func collection(_ pageCollectionView: HYPageCollectionView, collection: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
+        let gifModel = LYCGifViewModel.shareInstance.gifPackage[indexPath.row]
+        deleage?.gitView!(self, collectionView: collection, didSelectRowAtIndex: indexPath, gifModel: gifModel)
+    }
 }

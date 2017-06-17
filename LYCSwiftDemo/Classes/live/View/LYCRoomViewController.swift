@@ -14,15 +14,24 @@ class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
     
     // MARK: 控件属性
     @IBOutlet weak var bgImageView: UIImageView!
-    
+    fileprivate var timer : Timer?
     fileprivate lazy var chatToolsView : LYCChatToolView = LYCChatToolView.loadNibAble()
+    
     fileprivate lazy var giftView : LYCGifView = {
-        
         let rect = CGRect(x: 0, y: kScreenHeight, width: kScreenWidth, height: 280)
         let gifView = LYCGifView(frame:rect)
-        
+        gifView.deleage = self
         return gifView
+    }()
     
+    fileprivate lazy var chatScoket : YCSocket = {
+        let chatSocket = YCSocket(addr: "192.168.0.108", port: 8788)
+        if chatSocket.connectServer() {
+            chatSocket.startReadMsg()
+        }
+            
+        chatSocket.delegate = self;
+        return chatSocket;
     }()
     
     // MARK: 系统回调函数
@@ -30,14 +39,14 @@ class LYCRoomViewController: UIViewController , LYCEmitterProtocol {
         super.viewDidLoad()
         setupUI()
         addObserver()
-        
+        chatScoket.sendJoinRoom()
     }
-    
     
     deinit {
+   
+        chatScoket.sendLeaveRoom()
         print(" room  deinit" )
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -77,7 +86,6 @@ extension LYCRoomViewController {
     
     private func setupGifView(){
         LYCGifViewModel.shareInstance.loadGifData(finishCallBack: {
-            print("ddd")
             self.view.addSubview(self.giftView)
             self.view.bringSubview(toFront: self.giftView)
         })
@@ -91,11 +99,16 @@ extension LYCRoomViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillChangeFrame (_:)) , name: .UIKeyboardWillChangeFrame, object: nil)
         
     }
+    
 }
+
 
 // MARK:- 事件监听
 extension LYCRoomViewController {
     @IBAction func exitBtnClick() {
+        timer?.invalidate()
+        timer = nil
+        chatScoket.sendLeaveRoom()
         _ = navigationController?.popViewController(animated: true)
     }
     
@@ -141,15 +154,48 @@ extension LYCRoomViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.chatToolsView.chatTextFiled.resignFirstResponder()
-        UIView.animate(withDuration: 0.5) { 
+        UIView.animate(withDuration: 0.5) {
+            self.chatToolsView.frame.origin.y = kScreenHeight
             self.giftView.frame.origin.y = kScreenHeight
         }
     }
 }
-
+//MARK:-LYCChatToolViewDelegate 聊天框代理
 extension LYCRoomViewController : LYCChatToolViewDelegate{
+    
     func chatToolView(_ chatToolView: LYCChatToolView, message: String) {
-        print(message)
+        chatScoket.sendTextMessage(textMsg: message)
+    }
+}
+//MARK:-LYCGifView 发送礼物回调
+extension LYCRoomViewController : LYCGifViewDelegate{
+    
+    func gitView(_ gifView: LYCGifView, collectionView: UICollectionView, didSelectRowAtIndex indexPath: IndexPath, gifModel: LYCGifModel) {
+        chatScoket.sendGif(gifName: gifModel.subject, gifUrl: gifModel.img, gifNum: "1")
+        self.giftView.frame.origin.y = kScreenHeight
     }
 
+}
+
+//MARK:- YCSocketDelegate socket消息代理
+extension LYCRoomViewController : YCSocketDelegate{
+    
+    func socket(_ socket: YCSocket, joinRoom userInfo: UserInfo) {
+        print(userInfo.name + ":加入房间" )
+        
+    }
+    
+    func socket(_ socket: YCSocket, leaveRoom userInfo: UserInfo) {
+        print(userInfo.name + ":离开房间")
+        
+    }
+    
+    func socket(_ socket: YCSocket, chatMsg: TextMessage) {
+        print(chatMsg.user.name + ":" + chatMsg.text)
+    }
+    
+    func socket(_ socket: YCSocket, sendGif gif: GiftMessage) {
+        print(gif.user.name + " 送出 " + gif.giftname)
+        
+    }
 }

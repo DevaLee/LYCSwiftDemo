@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6A2F856AD02666B4FA6A5BB2 /* Pods_LYCSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */; };
+		892158F91EF4BE7C00BA1D56 /* IMMessage.proto in Resources */ = {isa = PBXBuildFile; fileRef = 892158F01EF4BE7C00BA1D56 /* IMMessage.proto */; };
+		892158FB1EF4BE7C00BA1D56 /* YCSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892158F21EF4BE7C00BA1D56 /* YCSocket.swift */; };
+		892158FC1EF4BE7C00BA1D56 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892158F41EF4BE7C00BA1D56 /* ysocket.swift */; };
+		892158FD1EF4BE7C00BA1D56 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 892158F51EF4BE7C00BA1D56 /* ytcpsocket.c */; };
+		892158FE1EF4BE7C00BA1D56 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892158F61EF4BE7C00BA1D56 /* ytcpsocket.swift */; };
+		892158FF1EF4BE7C00BA1D56 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 892158F71EF4BE7C00BA1D56 /* yudpsocket.c */; };
+		892159001EF4BE7C00BA1D56 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */; };
+		892159181EF4C08B00BA1D56 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892159171EF4C08B00BA1D56 /* Immessage.proto.swift */; };
 		89CAE8BE1EECF1F100CE8BBD /* LYCRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */; };
 		89CAE8BF1EECF1F100CE8BBD /* LYCRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */; };
 		89CAE8C21EED08B000CE8BBD /* LYCEmitterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */; };
@@ -62,6 +70,15 @@
 
 /* Begin PBXFileReference section */
 		0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYCSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892158F01EF4BE7C00BA1D56 /* IMMessage.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IMMessage.proto; sourceTree = "<group>"; };
+		892158F21EF4BE7C00BA1D56 /* YCSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YCSocket.swift; sourceTree = "<group>"; };
+		892158F41EF4BE7C00BA1D56 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		892158F51EF4BE7C00BA1D56 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		892158F61EF4BE7C00BA1D56 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		892158F71EF4BE7C00BA1D56 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		892159011EF4BF1000BA1D56 /* libprotobuf.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libprotobuf.tbd; path = usr/lib/libprotobuf.tbd; sourceTree = SDKROOT; };
+		892159171EF4C08B00BA1D56 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
 		89CAE8BC1EECF1F100CE8BBD /* LYCRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCRoomViewController.swift; sourceTree = "<group>"; };
 		89CAE8BD1EECF1F100CE8BBD /* LYCRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCRoomViewController.xib; sourceTree = "<group>"; };
 		89CAE8C11EED08B000CE8BBD /* LYCEmitterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYCEmitterProtocol.swift; sourceTree = "<group>"; };
@@ -133,9 +150,41 @@
 		11E15BD62D44D064A6A30C92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				892159011EF4BF1000BA1D56 /* libprotobuf.tbd */,
 				0A016D22099CAC7E374C3FF5 /* Pods_LYCSwiftDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		892158E01EF4BD8800BA1D56 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				892158EF1EF4BE7C00BA1D56 /* YCSocket */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		892158EF1EF4BE7C00BA1D56 /* YCSocket */ = {
+			isa = PBXGroup;
+			children = (
+				892159171EF4C08B00BA1D56 /* Immessage.proto.swift */,
+				892158F01EF4BE7C00BA1D56 /* IMMessage.proto */,
+				892158F21EF4BE7C00BA1D56 /* YCSocket.swift */,
+				892158F31EF4BE7C00BA1D56 /* ysocket */,
+			);
+			path = YCSocket;
+			sourceTree = "<group>";
+		};
+		892158F31EF4BE7C00BA1D56 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				892158F41EF4BE7C00BA1D56 /* ysocket.swift */,
+				892158F51EF4BE7C00BA1D56 /* ytcpsocket.c */,
+				892158F61EF4BE7C00BA1D56 /* ytcpsocket.swift */,
+				892158F71EF4BE7C00BA1D56 /* yudpsocket.c */,
+				892158F81EF4BE7C00BA1D56 /* yudpsocket.swift */,
+			);
+			path = ysocket;
 			sourceTree = "<group>";
 		};
 		89CAE8B41EECE77400CE8BBD /* live */ = {
@@ -310,6 +359,7 @@
 				AA10AA141EE8143F00F6BEC5 /* Component */,
 				AA10AA131EE8143F00F6BEC5 /* Base */,
 				89FB2CD11EEBE94F00CCE581 /* Tools */,
+				892158E01EF4BD8800BA1D56 /* Chat */,
 				89CAE8B41EECE77400CE8BBD /* live */,
 				AA10AA161EE8143F00F6BEC5 /* Main */,
 				AA10AA181EE8143F00F6BEC5 /* Rank */,
@@ -487,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892158F91EF4BE7C00BA1D56 /* IMMessage.proto in Resources */,
 				AA756AC91EEEB7EF00C142C7 /* LYCEmotionCollectionViewCell.xib in Resources */,
 				AA10AA0B1EE8136F00F6BEC5 /* LaunchScreen.storyboard in Resources */,
 				AA4B37021EEFCD9E007AE5AC /* LYCGifViewCell.xib in Resources */,
@@ -556,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892158FE1EF4BE7C00BA1D56 /* ytcpsocket.swift in Sources */,
 				AA10AA031EE8136F00F6BEC5 /* ViewController.swift in Sources */,
 				89FB2CB91EEBBDB100CCE581 /* LYCUIColor-Extension.swift in Sources */,
 				AA10AA1E1EE8149700F6BEC5 /* LYCMeViewController.swift in Sources */,
@@ -571,12 +623,16 @@
 				89CAE8C21EED08B000CE8BBD /* LYCEmitterProtocol.swift in Sources */,
 				89FB2CC31EEBBE2400CCE581 /* HYPageView.swift in Sources */,
 				89FB2CA81EEBBB9B00CCE581 /* LYCCollectionViewLayout.swift in Sources */,
+				892158FB1EF4BE7C00BA1D56 /* YCSocket.swift in Sources */,
 				AA756ABC1EEE743000C142C7 /* LYCEmotionView.swift in Sources */,
 				89FB2CC71EEBBE8100CCE581 /* LYCNSDate-Extension.swift in Sources */,
 				AA756AAF1EEE27E500C142C7 /* LYCEmotionModel.swift in Sources */,
 				89FB2CC41EEBBE2400CCE581 /* HYTitleStyle.swift in Sources */,
+				892158FD1EF4BE7C00BA1D56 /* ytcpsocket.c in Sources */,
+				892159001EF4BE7C00BA1D56 /* yudpsocket.swift in Sources */,
 				89FB2C981EEBB8A100CCE581 /* LYCMainViewController.swift in Sources */,
 				AA4B37011EEFCD9E007AE5AC /* LYCGifViewCell.swift in Sources */,
+				892159181EF4C08B00BA1D56 /* Immessage.proto.swift in Sources */,
 				AA756AB71EEE2E9100C142C7 /* LYCChatToolView.swift in Sources */,
 				89CAE8BE1EECF1F100CE8BBD /* LYCRoomViewController.swift in Sources */,
 				89FB2CB41EEBBCE400CCE581 /* LYCMainViewModel.swift in Sources */,
@@ -590,8 +646,10 @@
 				AA10AA011EE8136F00F6BEC5 /* AppDelegate.swift in Sources */,
 				89FB2CCC1EEBC2C600CCE581 /* LYCBaseModel.swift in Sources */,
 				89FB2CCF1EEBDA8700CCE581 /* LYCAnchorCollectionViewCell.swift in Sources */,
+				892158FC1EF4BE7C00BA1D56 /* ysocket.swift in Sources */,
 				AA10AA241EE817BE00F6BEC5 /* LYCSharedViewController.swift in Sources */,
 				AA756AC51EEEAE1500C142C7 /* HYPageCollectionView.swift in Sources */,
+				892158FF1EF4BE7C00BA1D56 /* yudpsocket.c in Sources */,
 				AA10AA201EE814A200F6BEC5 /* LYCRankViewController.swift in Sources */,
 				89FB2CB21EEBBCC700CCE581 /* LYCAnchorTypeModel.swift in Sources */,
 				89FB2CC21EEBBE2400CCE581 /* HYContentView.swift in Sources */,
@@ -720,6 +778,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FD3FY3GTVB;
 				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyc.LYCSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -734,6 +793,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FD3FY3GTVB;
 				INFOPLIST_FILE = LYCSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyc.LYCSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

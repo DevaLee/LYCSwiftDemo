@@ -29,6 +29,7 @@ class LYCGifViewModel: NSObject {
 extension LYCGifViewModel {
 
     func loadGifData(finishCallBack : @escaping () -> ()){
+        gifPackage.removeAll()
         
         LYCNetworkTool.loadData(type: .GET, urlString: urlString, parameter: ["type" : 0,"page" : 1 , "rows" : 150]) { (response) in
             guard let responseResult = response as? [String : Any] else{
@@ -50,7 +51,7 @@ extension LYCGifViewModel {
                 print("数据出错 Array")
                 return
             }
-            
+            print("获取礼物列表成功")
             for gifDict in listArray{
                 self.gifPackage.append(LYCGifModel(dict : gifDict))
             }

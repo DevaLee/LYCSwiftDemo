@@ -73,7 +73,6 @@ extension LYCChatToolView : UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.sendButton.isEnabled = true
-        print("开始编辑")
     }
 
 }
